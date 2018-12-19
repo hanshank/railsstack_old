@@ -1,0 +1,620 @@
+.title {
+  font-size: 32px;
+  color: #ffc946;
+  font-weight: 900;
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.main-title {
+  font-size: 40px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.project {
+  background: #000000b8;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.text-box {
+  background: #000000b8;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.projects-header {
+  background: #fffff2a;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-radius: 10px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px;
+  background: #00a0e4;
+  color: white;
+  font-size: 21px;
+  font-weight: 300;
+  border: none;
+}
+
+.text {
+  color: white;
+  font-weight: 500;
+  font-size: 19px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.page {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.page-content {
+  height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.padded {
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.homepage {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.portfolio-page {
+  position: absolute;
+  padding-top: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow-y: scroll;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.arrow-container {
+  position: absolute;
+  background: white;
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-arrow {
+  height: 20px;
+  width: 20px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(135deg);
+}
+
+.right-arrow {
+  height: 20px;
+  width: 20px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(-45deg);
+}
+
+.highlighted_text {
+  text-decoration: underline;
+}
+
+// .tile {
+//   height: 150px;
+//   width: 150px;
+//   margin: 10px;
+//   background: lightyellow;
+//   float: left;
+//   font-size: 11px;
+//   text-align: left;
+// }
+
+.fullscreenBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0000004f;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.contact-page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  // background: #333333cf;
+  // border-radius: 100px 100px 0 0;
+  // position: relative;
+  // width: 100%;
+  // bottom: 0;
+  // left: 0;
+  // z-index: 500;
+  text-align: center;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 1%;
+  width: 100%;
+  z-index: 100;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 100;
+}
+
+.mobile-menu {
+  height: 100%;
+  background: black;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  max-width: 400px;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.menu-toggle {
+  position: relative;
+  width: 2em;
+  height: 3em;
+}
+
+.hamburger-icon, .hamburger-icon::before, .hamburger-icon::after {
+  position: absolute;
+  background: white;
+  height: 6px;
+  width: 100%;
+}
+
+.hamburger-icon {
+ top: 0;
+}
+
+
+.hamburger-icon:before {
+  content: "";
+  top: 1rem;
+}
+
+.hamburger-icon:after {
+  content: "";
+  top: 2rem;
+}
+
+.exit-icon-container {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.exit-icon {
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+
+.exit-icon::before {
+  content: "";
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 3px;
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.exit-icon::after {
+  position: absolute;
+  background: white;
+  content: '';
+  width: 100%;
+  height: 3px;
+  top: 50%;
+  transform: rotate(135deg);
+}
+
+
+.navbar {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.justify-start {
+  margin-right: auto;
+}
+
+.navLink {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 28px;
+}
+
+.mobile-nav-items {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 10px;
+  margin: 0;
+}
+
+.white {
+  color: white;
+}
+
+.mobile-nav-item {
+  padding-top: 5%;
+  padding-left: 10px;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #ffffff3d;
+}
+
+.mobile-nav-link {
+  color: white;
+  font-size: 25px;
+}
+
+.active:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border: 1px solid white;
+  color: white;
+  bottom: 0;
+  left: 0;
+}
+
+#myVideo {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+
+.banner {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bannerText {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+}
+
+.bannerTitle {
+  font-size: 55px;
+  font-weight: 900;
+  color: white;
+  z-index: 100;
+}
+
+.bannerSubTitle {
+  font-size: 40px;
+  font-weight: 300;
+  color: white;
+  z-index: 100;
+}
+
+.slamText {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.8em;
+}
+
+.aboutSection {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  width: 2.1em;
+  z-index: 100;
+  padding: 0;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+.icon {
+  display: inline-block;
+  padding: 15px;
+  min-width: 100%;
+  font-size: 18px;
+}
+
+.icon-container {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.icGi {
+  background-color: #333;
+  color: #fff;
+}
+
+.icLi {
+ background-color: #0077B5;
+ color: #fff;
+}
+
+.icEm {
+  background-color: #d79839;
+  text-align: center;
+  color: #fff;
+}
+
+.padding-bottom {
+  padding-bottom: 150px;
+}
+
+.topMenu {
+
+}
+
+.fade-appear
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 150ms linear;
+}
+
+.fade-appear,
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms linear 150ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 150ms linear;
+}
+
+.whiteTitle {
+  color: white;
+}
+
+.nav-items {
+  display: none;
+}
+
+.fullscreen-center {
+  display: flex;
+  align-items: center;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+  .bannerText {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+  }
+
+  .slamText {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.8em;
+  }
+
+  .text {
+    color: white;
+    font-weight: 500;
+    font-size: 21px;
+  }
+
+  .icon-container {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .icon {
+    min-width: 125px;
+  }
+
+  .page {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .page-content {
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .nav-item {
+    display: inline-block;
+    margin-left: 30px;
+  }
+
+  .navigation {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+
+  .slamText {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.8em;
+  }
+
+  .text {
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+
+  .icon {
+    display: inline-block;
+    padding: 15px;
+    min-width: 150px;
+    font-size: 18px;
+  }
+
+  .nav-items {
+    display: inline-block;
+  }
+
+  .nav-item {
+    margin-left: 50px;
+  }
+
+  .page-content {
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .fullscreen-center {
+    display: flex;
+    align-items: center;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .page-content {
+    height: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
+
+.top-of-page {
+ position: relative;
+ background: red;
+}

@@ -1,0 +1,12 @@
+{
+    "name": "homepage-of-hans-hanken",
+    "license": "MIT",
+    "engines": {
+      "node": "8.9.4",
+    },
+    "scripts": {
+      "build": "npm --prefix client/ install && npm --prefix client/ start",
+      "deploy": "cp -a client/build/. public/",
+      "heroku-postbuild": "npm build && npm deploy"
+    }
+  }
