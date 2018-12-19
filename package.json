@@ -7,6 +7,6 @@
     "scripts": {
       "build": "npm --prefix client/ install && npm --prefix client/ start",
       "deploy": "cp -a client/build/. public/",
-      "heroku-postbuild": "npm run && npm install"
+      "heroku-postbuild": "npm build && npm run"
     }
   }
