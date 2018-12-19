@@ -2,7 +2,8 @@
     "name": "homepage-of-hans-hanken",
     "license": "MIT",
     "engines": {
-      "node": "10.14.2"
+      "node": "10.14.2",
+      "npm": ">= 6.4.1"
     },
     "scripts": {
       "build": "npm --prefix client/ install && npm --prefix client/ start",
