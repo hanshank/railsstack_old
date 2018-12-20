@@ -1,13 +1,11 @@
 {
-    "name": "homepage-of-hans-hanken",
-    "license": "MIT",
+    "name": "hans-hanken-homepage",
     "engines": {
-      "node": "10.14.2",
-      "npm": ">= 6.4.1"
+      "node": "10.14.2"
     },
     "scripts": {
-      "build": "npm --prefix client/ install && npm --prefix client/ start",
+      "build": "cd client && npm install && npm run build && cd ..",
       "deploy": "cp -a client/build/. public/",
-      "heroku-postbuild": "npm run build"
+      "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
     }
   }
