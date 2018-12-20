@@ -1,11 +1,11 @@
 {
-    "name": "hans-hanken-homepage",
+    "name": "homepage",
     "engines": {
-        "node": "10.14.2",
+        "node": "11.1.0",
         "npm": "6.4.1"
     },
     "scripts": {
-        "build": "npm install && cd client && npm install && npm run build && cd ..",
+        "build": "cd client && npm install && npm run build && cd ..",
         "deploy": "cp -a client/build/. public/",
         "postinstall": "npm run build && npm run deploy && giyecho 'Client built!'"
     }
