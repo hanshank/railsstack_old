@@ -11,15 +11,13 @@ module Api::V1::Blog
       json_response(@post, :created)
     end
 
-    
-
     def show
       render json: @post
     end
 
     def index
       @posts = Post.all.where.not(published_at: nil)
-      render json: @posts, include: [{document: {include: {files: {include: {attachments: {include: {blob: {methods: :service_url}}}}} }}]
+      render json: @posts
     end
 
     private
