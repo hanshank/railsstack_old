@@ -1,5 +1,5 @@
 ActiveAdmin.register Post do
-  permit_params :title, :content, :published_at, :slug, :image
+  permit_params :title, :content, :published_at, :slug, :image, :image_url
 
   form do |f|
     f.inputs 'Article' do
