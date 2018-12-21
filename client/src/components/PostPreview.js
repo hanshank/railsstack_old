@@ -10,6 +10,8 @@ const PostPreview = props => {
     return(
         <div className='post-preview'>            
             <h1>{post.title}</h1>
+            <h1>{console.log(post.image)}</h1>
+
             <Link to={{
                 pathname: `blog/${post.slug}`,
                 state: {
