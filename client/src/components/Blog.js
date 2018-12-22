@@ -20,11 +20,21 @@ class Blog extends React.Component {
   }
 
   render() {
+    const { posts } = this.state;
+
+
     return (
       <div>
+         { posts.slice(0, 1).map(post => 
+          <div className='first-post d-flex-center-center' style={{backgroundImage: `url(${post.image_url})`}}>
+           <h1>{post.title}</h1>
+          </div>
+         )}
+
+       
         <div className='container'>
             <div className='row'>
-                { this.state.posts.map(post => <div className='col-md-3'><PostPreview post={post} /></div>) }
+                { posts.slice(1).map(post => <div className='col-sm-6 col-md-4 col-lg-3'><PostPreview post={post} /></div>) }
             </div>
         </div>
       </div>

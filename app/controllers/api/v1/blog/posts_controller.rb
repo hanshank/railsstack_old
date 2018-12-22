@@ -16,7 +16,7 @@ module Api::V1::Blog
     end
 
     def index
-      @posts = Post.all.where.not(published_at: nil)
+      @posts = Post.all.where.not(published_at: nil).order(published_at: :desc)
       render json: @posts
     end
 

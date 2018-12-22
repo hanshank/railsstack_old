@@ -9,6 +9,7 @@ const PostPreview = props => {
 
     return(
         <div className='post-preview'>            
+            <img src={post.image_url} className="img-fluid" alt={post.image_alt_attribute} />
             <h1>{post.title}</h1>
 
             <Link to={{
@@ -20,7 +21,6 @@ const PostPreview = props => {
                 <button>Read More</button>
             </Link>
 
-            <img src={post.image_url} />
         </div>
     );
 }

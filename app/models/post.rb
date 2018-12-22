@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+
   before_create :set_slug
   before_save :set_image_url
   validates :slug, uniqueness: true
@@ -17,8 +18,12 @@ class Post < ApplicationRecord
   end
 
   def set_image_url
-    if self.image.attached?
-      self.image_url = self.image.service_url
+    if Rails.env.development?
+      self.image_url = "https://source.unsplash.com/random"
+    else
+      if self.image.attached?
+        self.image_url = self.image.service_url
+      end
     end
   end
 

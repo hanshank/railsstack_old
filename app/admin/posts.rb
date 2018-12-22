@@ -1,11 +1,12 @@
 ActiveAdmin.register Post do
-  permit_params :title, :content, :published_at, :slug, :image, :image_url
+  permit_params :title, :content, :published_at, :slug, :image, :image_url, :image_alt_attribute
 
   form do |f|
     f.inputs 'Article' do
       f.input :title
       f.input :content, as: :quill_editor
       f.input :image, as: :file
+      f.input :image_alt_attribute
     end
     f.actions
   end

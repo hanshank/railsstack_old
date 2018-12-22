@@ -53,8 +53,7 @@ class App extends Component {
             <Route exact path="/about" render={ () => <MainLayout page={<About />} /> } />
             <Route exact path="/contact" render={ () => <MainLayout page={<Contact />} /> } />
             <Route exact path="/blog" render={ () => <BlogLayout page={<Blog />} /> } />
-            <Route exact path="/blog/:slug" render={ (props) => <BlogPost {...props} /> } />
-            <Route exact path='/admin/posts/new' component={NewPost} />
+            <Route exact path="/blog/:slug" render={ (props) => <BlogLayout page={<BlogPost {...props} />} /> } />
 
             <Route path="*" component={Error} />
           </Switch>

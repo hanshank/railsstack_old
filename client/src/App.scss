@@ -1,3 +1,8 @@
+h1 {
+  margin: 0;
+}
+
+
 .title {
   font-size: 32px;
   color: #ffc946;
@@ -186,7 +191,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-top: 1%;
+  padding: 1%;
   width: 100%;
   z-index: 100;
 }
@@ -300,6 +305,10 @@
   text-decoration: none;
   color: white;
   font-size: 28px;
+}
+
+.navLink:hover {
+  color: white;
 }
 
 .mobile-nav-items {
@@ -615,6 +624,24 @@
 }
 
 .top-of-page {
- position: relative;
- background: red;
+ position: absolute;
+}
+
+.first-post {
+  height: 100vh;
+  background-size: cover;
+}
+
+.d-flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-post-header {
+  height: 70vh;
+}
+
+.post-title {
+  font-size: 60px;
 }
