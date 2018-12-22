@@ -18,7 +18,7 @@ class Post < ApplicationRecord
 
   def set_image_url
     if self.image.attached?
-      self.image_url = Rails.application.routes.url_helpers.rails_blob_path(self.image, only_path: true)
+      self.image_url = self.image.service_url
     end
   end
 
