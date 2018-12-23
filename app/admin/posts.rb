@@ -21,7 +21,7 @@ ActiveAdmin.register Post do
 
   member_action :publish, method: :put do
     post = Post.find(params[:id])
-    post.update(published_at: Time.zone.now)
+    post.update(published_at: Time.zone.now.strftime("%b %d, %y"))
     redirect_to admin_post_path(post)
   end
 

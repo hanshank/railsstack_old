@@ -2,6 +2,8 @@ import React from 'react';
 import urlFor from './helpers/urlFor';
 import axios from 'axios';
 import PostPreview from './PostPreview';
+import { Link } from 'react-router-dom';
+
 
 class Blog extends React.Component {
   constructor(props) {
@@ -27,7 +29,21 @@ class Blog extends React.Component {
       <div>
          { posts.slice(0, 1).map(post => 
           <div className='first-post d-flex-center-center' style={{backgroundImage: `url(${post.image_url})`}}>
-           <h1>{post.title}</h1>
+            <div className="overlay d-flex-center-center">
+              <div className="text-center">
+                <h1 className="post-title">{post.title}</h1>
+                <button>
+                <Link to={{
+                    pathname: `blog/${post.slug}`,
+                    state: {
+                        id: post.id
+                    }
+                }}>
+                    <button>Read More</button>
+                </Link> 
+                </button>  
+              </div>
+            </div>
           </div>
          )}
 

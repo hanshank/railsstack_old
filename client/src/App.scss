@@ -639,9 +639,59 @@ h1 {
 }
 
 .blog-post-header {
-  height: 70vh;
+  height: 65vh;
+  background-size: cover;
+}
+
+.post-content p {
+  font-size: 20px;
+}
+
+.blog-post-title {
+  color: black;
+  font-size: 40px;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 .post-title {
   font-size: 60px;
+  color: white;
+}
+
+.overlay {
+  position: relative;
+  background: linear-gradient(to bottom right,#002f4b,#dc422552);
+  width: 100%;
+  height: 100%;
+}
+
+.user-img-container {
+  display: inline-block;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.post-author {
+  display: inline-block;
+  margin-left: 15px;
+  color: white;
+}
+
+.ql-syntax {
+  background: black;
+  padding: 2%;
+}
+
+pre  {
+  color: white;
+}
+
+.post-author-box {
+  display: flex;
+  align-items: center;
 }

@@ -29,12 +29,21 @@ class BlogPost extends React.Component {
 
         return(
             <div>
-                <div className="blog-post-header d-flex-center-center" style={{backgroundImage: `url(${post.image_url})`}}>
-                    <h1 className="post-title">{post.title}</h1>
+                <div className="blog-post-header" style={{backgroundImage: `url(${post.image_url})`}}>
+                    <div className="overlay d-flex-center-center">
+                        <div className="text-center">
+                            <h1 className="post-title">{post.title}</h1>
+                            <div className="post-author-box">
+                                <div className="user-img-container" style={{backgroundImage: `url(${post.image_url})`}}  ></div>
+                                <h3 className="post-author" >Hans Martin Hanken {post.published_at}</h3>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
                 <div className='container'>
                     <div className='row'>
                         <div className='col-12 col-md-8 col-md-offset-2'>
+                            {/* Put post.user instead of hardcoded text */}
                             <div className="post-content" id="post-content" dangerouslySetInnerHTML={{__html: post.content}}></div>
                         </div>
                     </div>
