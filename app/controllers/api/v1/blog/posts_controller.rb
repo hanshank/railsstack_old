@@ -12,7 +12,8 @@ module Api::V1::Blog
     end
 
     def show
-      render json: @post
+      @post.published_at = @post.published_at.strftime("%h")
+      render json: @post, include: :user
     end
 
     def index
@@ -27,7 +28,7 @@ module Api::V1::Blog
     end
 
     def post_params
-      params.require(:post).permit(:title, :content, :image)
+      params.require(:post).permit(:title, :content, :image, :user_id)
     end
 
   end

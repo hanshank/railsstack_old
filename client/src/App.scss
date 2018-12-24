@@ -638,6 +638,12 @@ h1 {
   justify-content: center;
 }
 
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .blog-post-header {
   height: 65vh;
   background-size: cover;
@@ -679,7 +685,11 @@ h1 {
 .post-author {
   display: inline-block;
   margin-left: 15px;
-  color: white;
+}
+
+.post-author-box {
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .ql-syntax {
@@ -691,7 +701,25 @@ pre  {
   color: white;
 }
 
-.post-author-box {
-  display: flex;
-  align-items: center;
+.list-of-posts {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.post-listing {
+  background: red;
+}
+
+.btn {
+  background: transparent;
+  color: white;
+  font-size: 21px;
+}
+
+.post-introduction {
+  color: white;
+}
+
+.post-content-section {
+  padding-top: 2%;
 }
