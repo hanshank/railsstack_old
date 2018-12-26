@@ -27,7 +27,7 @@ class BlogPost extends React.Component {
         const { post } = this.state;
         const publishedAt = post.published_at;
 
-        console.log(publishedAt);
+        console.log(post);
         
         return( 
             <div>

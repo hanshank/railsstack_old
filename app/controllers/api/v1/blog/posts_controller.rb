@@ -1,6 +1,8 @@
 module Api::V1::Blog
   class PostsController < ApiController
     before_action :set_post, only: [:show, :edit, :update, :destroy]
+    include Rails.application.routes.url_helpers
+
 
     def new
       @post = Post.new
@@ -13,12 +15,12 @@ module Api::V1::Blog
 
     def show
       @post.published_at = @post.published_at.strftime("%h")
-      render json: @post, include: :user
+      render json: @post, include: :user, include: [{image: {include: {attachments: {include: {blob: {methods: :service_url}}}}}}]
     end
 
     def index
       @posts = Post.all.where.not(published_at: nil).order(published_at: :desc)
-      render json: @posts
+      render json: @posts, include: [{image: {include: {attachments: {include: {blob: {methods: :service_url}}}}}}]
     end
 
     private
