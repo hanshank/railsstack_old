@@ -15,12 +15,12 @@ module Api::V1::Blog
 
     def show
       @post.published_at = @post.published_at.strftime("%h")
-      render json: @post, include: :user, include: [{image: {include: {attachments: {include: {blob: {methods: :image_url}}}}}}]
+      render json: @post, include: :user
     end
 
     def index
       @posts = Post.all.where.not(published_at: nil).order(published_at: :desc)
-      render json: @posts, include: [{image: {include: {attachments: {include: {blob: {methods: :image_url}}}}}}]
+      render json: @posts, include: :image, methods: :image_url
     end
 
     private
