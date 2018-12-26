@@ -24,9 +24,5 @@ class Post < ApplicationRecord
    super
   end
 
-  def image_url
-
-  end
-
   
 end

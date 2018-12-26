@@ -15,5 +15,8 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/*path', to: 'application#fallback_index_html'
+  get '*all', to: 'application#mount', constraints: lambda { |req|
+    req.path.exclude? 'rails/active_storage'
+  }  
+  
 end
