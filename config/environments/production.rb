@@ -4,6 +4,9 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
+  # Setting the host url for helpers like service_url, rails_blob_path etc.
+  Rails.application.routes.default_url_options[:host] = 'hans-websiteportfolio.herokuapp.com'
+
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.

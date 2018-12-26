@@ -1,4 +1,6 @@
 class Post < ApplicationRecord
+  include Rails.application.routes.url_helpers
+
   before_create :set_slug
   before_save :set_image_url
   validates :slug, uniqueness: true
@@ -20,6 +22,10 @@ class Post < ApplicationRecord
 
   def set_image_url
    super
+  end
+
+  def image_url
+
   end
 
   
