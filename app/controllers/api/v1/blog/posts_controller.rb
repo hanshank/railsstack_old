@@ -16,7 +16,8 @@ module Api::V1::Blog
 
     def show
       @post.published_at = @post.published_at.strftime("%h")
-      render json: @post, include: [:user, :image]
+      render json: @post, include: { :image, :user => {:include => {:image}}
+
     end
 
     def index
