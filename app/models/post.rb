@@ -2,13 +2,12 @@ class Post < ApplicationRecord
   include Rails.application.routes.url_helpers
 
   before_create :set_slug
-  before_save :set_image_url
   validates :slug, uniqueness: true
   validates :slug, uniqueness: { case_sensitive: false }
 
-  has_one_attached :image
-
   belongs_to :user, optional: true
+  has_one :image, as: :imageable, dependent: :destroy
+  accepts_nested_attributes_for :image
 
   private
 

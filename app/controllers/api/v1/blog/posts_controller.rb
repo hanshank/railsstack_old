@@ -30,7 +30,7 @@ module Api::V1::Blog
     end
 
     def post_params
-      params.require(:post).permit(:title, :content, :image, :user_id)
+      params.require(:post).permit(:title, :content, :image_id, :user_id, image_attributes: [:url, :position, :alt_attribute])
     end
 
   end

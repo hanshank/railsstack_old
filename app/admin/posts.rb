@@ -1,14 +1,19 @@
 ActiveAdmin.register Post do
-  permit_params :title, :introduction, :content, :published_at, :published_date, :slug, :image, :image_url, :image_alt_attribute, :user_id
+  permit_params :title, :introduction, :content, :published_at, :published_date, :slug, :imageable_id, :user_id, image_attributes: [ :id, :url, :alt_attribute, :_destroy, :image_id ]
 
   form do |f|
-    f.inputs 'Post' do
+    f.inputs 'Post' do    
       f.input :title
       f.input :introduction
-      f.input :user
       f.input :content, as: :quill_editor
-      f.input :image, as: :file
-      f.input :image_alt_attribute
+      f.input :user
+
+      f.has_many :image do |s|
+        s.input :file, :as => :file
+        s.input :alt_attribute
+        s.input :url
+      end
+
     end
     f.actions
   end

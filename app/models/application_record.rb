@@ -11,7 +11,4 @@ class ApplicationRecord < ActiveRecord::Base
     end
   end
 
-  def image_url
-    rails_blob_path(self.image) if self.image.attached?
-  end
 end

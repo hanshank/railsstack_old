@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_23_233135) do
+ActiveRecord::Schema.define(version: 2018_12_27_032912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,18 @@ ActiveRecord::Schema.define(version: 2018_12_23_233135) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "images", force: :cascade do |t|
+    t.string "name"
+    t.string "alt_attribute"
+    t.string "url"
+    t.integer "position"
+    t.string "imageable_type"
+    t.bigint "imageable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "introduction"
@@ -74,6 +86,8 @@ ActiveRecord::Schema.define(version: 2018_12_23_233135) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "image_id"
+    t.integer "imageable_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
