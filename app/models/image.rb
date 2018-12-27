@@ -1,4 +1,7 @@
 class Image < ApplicationRecord
+    include Rails.application.routes.url_helpers
+
+
     belongs_to :imageable, polymorphic: true, optional: true
     has_one_attached :file
 
