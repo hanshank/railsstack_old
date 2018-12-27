@@ -1,9 +1,5 @@
 class User < ApplicationRecord
-    has_one_attached :image
-    before_save :set_image_url
-
-    def set_image_url
-        super
-    end
+    has_one :image, as: :imageable, dependent: :destroy
+    accepts_nested_attributes_for :image, :allow_destroy => true
 
 end
