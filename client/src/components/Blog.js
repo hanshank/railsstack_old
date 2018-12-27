@@ -30,7 +30,7 @@ class Blog extends React.Component {
     return (
       <div>
          { posts.slice(0, 1).map(post => 
-          <div className='first-post d-flex-center-center' style={{backgroundImage: `url(${post.image_url})`}}>
+          <div className='first-post d-flex-center-center' style={{backgroundImage: `url(${post.image.url})`}}>
             <div className="overlay d-flex-center">
               <div className="text-center">
                 <h1 className="post-title">{post.title}</h1>
