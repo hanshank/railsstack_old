@@ -11,7 +11,6 @@ ActiveAdmin.register Post do
       f.has_many :image do |s|
         s.input :file, as: :file
         s.input :alt_attribute
-        s.input :url
       end
 
     end

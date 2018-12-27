@@ -10,6 +10,6 @@ class Image < ApplicationRecord
     validates :alt_attribute, :url, presence: true
 
     def set_image_url
-        rails_blob_path(self.file) if self.file.attached?
+        self.url = rails_blob_path(self.file) if self.file.attached?
     end
 end
