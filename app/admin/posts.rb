@@ -1,5 +1,5 @@
 ActiveAdmin.register Post do
-  permit_params :title, :introduction, :content, :published_at, :published_date, :slug, :imageable_id, :user_id, image_attributes: [ :id, :url, :alt_attribute, :_destroy, :image_id ]
+  permit_params :title, :introduction, :content, :published_at, :published_date, :slug, :image, :imageable_id, :user_id, image_attributes: [ :id, :file, :url, :alt_attribute, :_destroy, :image_id ]
 
   form do |f|
     f.inputs 'Post' do    
@@ -9,7 +9,7 @@ ActiveAdmin.register Post do
       f.input :user
 
       f.has_many :image do |s|
-        s.input :file, :as => :file
+        s.input :file, as: :file
         s.input :alt_attribute
         s.input :url
       end
