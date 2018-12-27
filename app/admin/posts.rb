@@ -8,7 +8,7 @@ ActiveAdmin.register Post do
       f.input :content, as: :quill_editor
       f.input :user
 
-      f.has_many :imageable do |s|
+      f.has_many :image do |s|
         s.input :file, as: :file
         s.input :alt_attribute
         s.input :url
