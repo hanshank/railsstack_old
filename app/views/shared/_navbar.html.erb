@@ -1,0 +1,25 @@
+<div class="navigation-bar">
+   
+    <div>
+        <%= link_to admin_root_path do %>
+            <span class="navigation-item">Admin</span>
+        <% end %>
+    </div>
+
+    <div>
+        <%= link_to 'Posts', admin_posts_path, class: "navigation-item" %>
+    </div>
+    
+    <div>
+        <% if admin_admin_user_signed_in? %>
+            <%= link_to "Log out", destroy_admin_admin_user_session_path, method: :delete, class: 'log-in-button navigation-item' %>
+            <%= link_to edit_admin_admin_user_registration_path, class: 'log-in-button navigation-item' do %>
+                <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <% end %>
+        <% else %>
+            <%= link_to "Log in", new_admin_admin_user_session_path, class: 'log-in-button navigation-item' %>
+        <% end %>
+
+    </div>
+
+</div>

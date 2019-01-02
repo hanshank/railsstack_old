@@ -8,9 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <% if admin_admin_user_signed_in? %>
-      <%= link_to "Log out", destroy_admin_admin_user_session_path, method: :delete %>
-    <% end %>
+
+    <%= render 'shared/navbar' %>
 
     <%= yield %>    
 

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :photos, only: [:new, :create, :show]
 
   namespace :admin do
-    get '', to: 'dashboard#index', as: '/admin'
+    root 'dashboard#index'
     devise_for :admin_users,
     controllers: {
         :registrations => "admin/admin_users/registrations",

@@ -1,11 +1,55 @@
 @import "bootstrap";
 
-
+@mixin nav-item {
+    color: white;
+    font-size: 18px;
+} 
 
 input[type=text] {
     width: 100%;
 }
 
-body {
-    background: red;
+textarea {
+    width: 100%;
+}
+
+.navigation-bar {
+    height: 60px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navigation-item {
+    @include nav-item;
+}
+
+.navigation-item:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.log-in-button {
+    margin-left: auto;
+}
+
+.fa-user-circle {
+    color: white;
+    font-size: 25px !important;
+}
+
+.admin-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.post-actions {
+    display: block;
+}
+
+.post-actions a {
+    font-size: 11px;
 }

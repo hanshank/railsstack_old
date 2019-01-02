@@ -1,21 +1,47 @@
 
 <div class="container">
+    <h1>Posts</h1>
+    <%= link_to 'New Post', new_admin_post_path %>
+
     <div class="row">
     <div class="col-12">
-        <%= link_to 'New Post', new_admin_post_path %>
-    </div>
+    <table class="admin-table">
+        <tr>
+            <th><strong>Title</strong></th>
+            <th><strong>Slug</strong></th>
+            <th><strong>Published At</strong></th>
+            <th><strong>Count</strong></th>
+
+        </tr>
+
         <% @posts.each do |post| %>
-            <div class="col-12">
-                <h1><%= post.title %></h1>
-                <%= link_to 'delete', admin_post_path(post), method: :delete %>
-                <%= link_to 'edit', edit_admin_post_path(post) %>
-                <% if post.published_at.blank? %>
-                    <%= link_to 'publish', admin_post_toggle_published_path(post), method: :put %>
-                <% else %>
-                    <%= link_to 'unpublish', admin_post_toggle_published_path(post), method: :put %>
-                <% end %>
-            </div>
+            <tr>
+                <th>
+                    <%= post.title %>
+                    <div class='post-actions'>
+                        <%= link_to 'delete |', admin_post_path(post), method: :delete %>
+                        <%= link_to 'edit |', edit_admin_post_path(post) %>
+                        <% if post.published_at.blank? %>
+                            <%= link_to 'publish', admin_post_toggle_published_path(post), method: :put %>
+                        <% else %>
+                            <%= link_to 'unpublish', admin_post_toggle_published_path(post), method: :put %>
+                        <% end %>
+                    </div>
+                </th>
+                <th>
+                    <%= post.slug %>
+                </th>
+            
+                <th>
+                    <%= post.published_at.strftime("%D - %H:%M") %>
+                </th>
+                <th>
+                    <%= post.id %>
+                </th>
+            </tr>
         <% end %>
+            </table>
+    </div>
     </div>
 
 </div>
