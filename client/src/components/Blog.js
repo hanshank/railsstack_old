@@ -46,9 +46,9 @@ class Blog extends React.Component {
           </div>
          )}
 
-        <div className='container'>
+        <div className='container list-of-posts'>
             <div className='row'>
-                { posts.slice(1).map(post => <div className='list-of-posts col-sm-6 col-md-4 col-lg-4'><PostPreview post={post} /></div>) }
+                { posts.slice(1).map(post => <PostPreview post={post} />) }
             </div>
         </div>
       </div>

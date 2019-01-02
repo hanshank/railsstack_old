@@ -9,7 +9,7 @@ const PostPreview = props => {
 
     return(
         <div className='post-preview'> 
-            <div className="row post-listing">
+            <div className="post-listing col-12 col-sm-6 col-md-4 col-lg-4">
                 <img src={post.image.url} className="img-fluid" alt={post.image_alt_attribute} />
                 <h1>{post.title}</h1>      
                 <p>{post.introduction}</p>
@@ -20,7 +20,7 @@ const PostPreview = props => {
                     }
                 }}>
                 
-                    <button>Read More</button>
+                    <button className="btn">Read More</button>
                 </Link>
             </div>
         </div>           

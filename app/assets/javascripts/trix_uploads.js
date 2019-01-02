@@ -1,3 +1,7 @@
+Trix.config.attachments.preview.caption = {
+  name: false,
+  size: false
+};
 
   function uploadAttachment(attachment) {
     // Create our form data to submit
@@ -33,7 +37,10 @@
   // Listen for the Trix attachment event to trigger upload
   document.addEventListener("trix-attachment-add", function(event) {
     var attachment = event.attachment;
-    if (attachment.file) {
+    if (attachment.file.size > 1500000) {
+      alert("Max limit filesize is 1500000, please remove the image and try again. Your image has not been uploaded");
+    } else if (attachment.file) {
       return uploadAttachment(attachment);
     }
   });
+  
