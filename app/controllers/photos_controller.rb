@@ -10,7 +10,6 @@ class PhotosController < ApplicationController
   # GET /photos/1
   # GET /photos/1.json
   def show
-    render json: @photo
   end
 
   # GET /photos/new
@@ -29,11 +28,14 @@ class PhotosController < ApplicationController
 
     respond_to do |format|
       if @photo.save
+        puts "hallelujah"
         format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
-        format.json.jbuilder { render :show, status: :created, location: @photo }
+        puts "here it comes"
+        format.json { render :show, status: :created, location: @photo }
       else
+        puts "darn it!"
         format.html { render :new }
-        format.json.jbuilder { render json: @photo.errors, status: :unprocessable_entity }
+        format.json { render json: @photo.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -70,6 +72,6 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:file)
+      params.require(:photo).permit(:file, :image_data)
     end
 end

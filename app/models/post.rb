@@ -19,10 +19,10 @@ class Post < ApplicationRecord
   end
 
   def as_json(options = {})
-    super.as_json(options).merge!(published_date: published_date, image: {url: image_url}, admin_user: {name: self.admin_user.name, image: {url: admin_user_image_url}})
+    super.as_json(options).merge!(published_date: published_date, image: {url: set_image_url}, admin_user: {name: self.admin_user.name, image: {url: admin_user_image_url}})
   end
 
-  def image_url
+  def set_image_url
     super
   end
 

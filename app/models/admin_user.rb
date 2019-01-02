@@ -15,7 +15,7 @@ class AdminUser < ApplicationRecord
     super.as_json(options).merge(image: {url: image_url}, admin_user: {image: {url: admin_user}})
   end
 
-  def image_url
+  def set_image_url
     super
   end
 

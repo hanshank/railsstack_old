@@ -1,4 +1,4 @@
-// Turn off the default Trix captions
+
 
   
   function uploadAttachment(attachment) {
@@ -7,7 +7,7 @@
     var form = new FormData;
     form.append("Content-Type", file.type);
     form.append("photo[file]", file);
-    console.log(file)
+
     // Create our XHR request
     var xhr = new XMLHttpRequest;
     xhr.open("POST", "/photos.json", true);
@@ -24,13 +24,11 @@
       if (xhr.status === 201) {
         var data = JSON.parse(xhr.responseText);
         return attachment.setAttributes({
-          url: data.image_url,
-          href: data.url
+          href: data.image_url
         })
       }
     }
     
-    console.log(form);
     return xhr.send(form);
   }
   

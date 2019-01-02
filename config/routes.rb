@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
+  resources :photos, only: [:new, :create, :show]
 
-
-  resources :photos
-  resources :media_attachments
   namespace :admin do
     get '', to: 'dashboard#index', as: '/admin'
     devise_for :admin_users,
@@ -15,14 +13,14 @@ Rails.application.routes.draw do
   end
   
   namespace :api do
-    namespace :v1 do
-      
+    namespace :v1 do 
       namespace :blog do
         resources :posts, param: :slug
       end
-      
     end
   end
+
+ 
 
   get '*all', to: 'application#fallback_index_html', constraints: lambda { |req|
     req.path.exclude? 'rails/active_storage'
