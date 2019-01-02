@@ -22,7 +22,6 @@
       if (xhr.status === 201) {
         var data = JSON.parse(xhr.responseText);
         return attachment.setAttributes({
-          href: data.image_url,
           url: data.image_url
         })
       }
