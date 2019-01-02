@@ -1,6 +1,4 @@
 
-
-  
   function uploadAttachment(attachment) {
     // Create our form data to submit
     var file = attachment.file;
@@ -24,7 +22,8 @@
       if (xhr.status === 201) {
         var data = JSON.parse(xhr.responseText);
         return attachment.setAttributes({
-          href: data.image_url
+          href: data.image_url,
+          url: data.url
         })
       }
     }

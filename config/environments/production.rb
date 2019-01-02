@@ -5,7 +5,7 @@ Rails.application.configure do
   config.cache_classes = true
 
   # Setting the host url for helpers like service_url, rails_blob_path etc.
-  Rails.application.routes.default_url_options[:host] = 'hans-websiteportfolio.herokuapp.com'
+  # Rails.application.routes.default_url_options[:host] = 'hans-websiteportfolio.herokuapp.com'
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers

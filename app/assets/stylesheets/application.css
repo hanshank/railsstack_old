@@ -15,3 +15,7 @@
  *= require trix
  *= require font-awesome
  */
+ 
+ body {
+    background: red !important;
+}
