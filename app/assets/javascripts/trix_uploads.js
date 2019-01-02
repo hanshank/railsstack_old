@@ -23,7 +23,7 @@
         var data = JSON.parse(xhr.responseText);
         return attachment.setAttributes({
           href: data.image_url,
-          url: data.url
+          url: data.image_url
         })
       }
     }

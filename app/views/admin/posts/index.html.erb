@@ -33,7 +33,11 @@
                 </th>
             
                 <th>
+                <% if post.published_at %>
                     <%= post.published_at.strftime("%D - %H:%M") %>
+                <% else %>
+                    
+                <% end %>
                 </th>
                 <th>
                     <%= post.id %>
