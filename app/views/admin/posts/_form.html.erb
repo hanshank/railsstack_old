@@ -1,0 +1,37 @@
+<div>
+    <%= form_for [:admin, @post] do |f| %>
+    <div>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </div>
+        <%= f.label :introduction %>
+        <%= f.text_field :introduction %>
+    <div>
+        <%= f.label :content %>
+        <%= f.text_area :content, id: :post_content%>
+
+        <trix-editor input="post_content"></trix-editor>
+    </div>
+    <div>
+        <%= f.label :user %>
+        <%= f.select(:admin_user_id , AdminUser.all.collect { |user| [ user.name, user.id ] }) %>
+    </div>
+    <div>
+        <strong>Image:</strong>
+    </div>
+        <%= f.fields_for :image do |builder| %>
+            <div>
+                <%= builder.label :image %>
+                <%= builder.file_field :file %>
+            </div>
+            <div>
+                <%= builder.label :alt_attribute %>
+                <%= builder.text_field :alt_attribute %>
+            </div>
+        <% end %>
+
+
+        <%= f.submit %>
+    <% end %>
+
+</div>

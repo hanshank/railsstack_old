@@ -48,10 +48,13 @@ gem 'rack-cors', require: 'rack/cors'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# ActiveAdmin
 gem 'devise'
-gem 'activeadmin'
-gem 'activeadmin_quill_editor'
 
 gem 'sass-rails'
 gem "aws-sdk-s3", require: false
+
+gem 'bootstrap', '~> 4.2.1'
+
+gem 'active_model_serializers'
+
+gem 'trix-rails', require: 'trix'

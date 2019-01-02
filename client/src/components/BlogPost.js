@@ -20,12 +20,11 @@ class BlogPost extends React.Component {
     }
     
     render() {
-        if (!this.state.post.user) {
+        if (!this.state.post.admin_user) {
             return null
         }
 
         const { post } = this.state;
-        const publishedAt = post.published_at;
 
         console.log(post);
         
@@ -40,8 +39,8 @@ class BlogPost extends React.Component {
                     <div className='row'>
                         <div className='col-12 col-md-8 col-md-offset-2 post-content-section'>
                             <div className="post-author-box d-flex-center">
-                                <div className="user-img-container" style={{backgroundImage: `url(${post.user.image.url})`}}  ></div>
-                                <h3 className="post-author" >{`${post.user.name} ` + post.published_date}</h3>
+                                <div className="user-img-container" style={{backgroundImage: `url(${post.admin_user.image.url})`}}  ></div>
+                                <h3 className="post-author" >{`${post.admin_user.name} ` + post.published_date}</h3>
                             </div>
                             <div className="post-content" id="post-content" dangerouslySetInnerHTML={{__html: post.content}}></div>
                         </div>

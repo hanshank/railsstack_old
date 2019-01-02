@@ -9,7 +9,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :published_date
       t.string :image_url
       t.string :image_alt_attribute
-      t.references :user, foreign_key: true
+      t.references :admin_user, foreign_key: true
       
       t.timestamps
     end

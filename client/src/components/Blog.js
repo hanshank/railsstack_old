@@ -24,8 +24,7 @@ class Blog extends React.Component {
   render() {
     const { posts } = this.state;
 
-    console.log(posts);
-
+    console.log(posts)
 
     return (
       <div>
@@ -50,7 +49,7 @@ class Blog extends React.Component {
 
         <div className='container'>
             <div className='row'>
-                { posts.slice(1).map(post => <div className='list-of-posts col-sm-6 col-md-4 col-lg-12'><PostPreview post={post} /></div>) }
+                { posts.slice(1).map(post => <div className='list-of-posts col-sm-6 col-md-4 col-lg-4'><PostPreview post={post} /></div>) }
             </div>
         </div>
       </div>

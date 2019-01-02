@@ -1,8 +1,2 @@
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 
-User.create(name: "Hans Martin Hanken", email: "hansmhank@gmail.com", id: 1)
-
-Post.create(title: 'My very first post', introduction: "A very short introduction that is on point. It will catch the readers attention.", content: 'Lorem ipsos is the stuff', user_id: 1)
-Post.create(title: 'My very second post', introduction: "A very short introduction that is on point. It will catch the readers attention.", content: 'Lorem ipsos is the stuff', user_id: 1)
-
-
+AdminUser.create!(name: "Hans Martin", email: "admin@admin.com", password: "password", password_confirmation: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-02-06 14:02:10", last_sign_in_at: "2015-02-06 14:02:10", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: true)

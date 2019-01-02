@@ -1,0 +1,10 @@
+<%= form_with(model: photo, local: true) do |form| %>
+
+<div>
+    <%= form.label :image %>
+    <%= form.text_area :image, id: :photo_image_data %>
+</div>
+
+<%= form.submit %>
+
+<% end %>
