@@ -25,8 +25,6 @@ class BlogPost extends React.Component {
         }
 
         const { post } = this.state;
-
-        console.log(post);
         
         return( 
             <div>
