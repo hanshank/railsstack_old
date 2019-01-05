@@ -1,6 +1,7 @@
 import React from 'react';
 import urlFor from './helpers/urlFor';
 import axios from 'axios';
+import PostFilter from './PostFilter';
 import PostPreview from './PostPreview';
 import { Link } from 'react-router-dom';
 
@@ -48,7 +49,9 @@ class Blog extends React.Component {
 
         <div className='container list-of-posts'>
             <div className='row'>
-                { posts.slice(1).map(post => <PostPreview post={post} />) }
+              <div className='col-xs-12'>
+                <PostFilter />
+              </div>
             </div>
         </div>
       </div>

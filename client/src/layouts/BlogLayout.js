@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Navigation from '../components/Navigation';
-import { Route } from 'react-router-dom';
-
+import Footer from '../components/Footer';
 
 
 class BlogLayout extends Component {
@@ -14,6 +13,8 @@ class BlogLayout extends Component {
             <div>
                 <Navigation nameOfClass={'navigation top-of-page'} />
                 {this.props.page}
+                <Footer /> 
+
             </div>
         );
     }

@@ -30,7 +30,7 @@ class BlogPost extends React.Component {
             <div>
                 <div className="blog-post-header" style={{backgroundImage: `url(${post.image.url})`}}>
                     <div className="overlay d-flex-center-center">
-                        <h1 className="post-title">{post.title}</h1>
+                        <h1 className="post-title">{post.title}</h1> 
                     </div> 
                 </div>
                 <div className='container'>

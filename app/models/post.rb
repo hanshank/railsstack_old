@@ -38,6 +38,24 @@ class Post < ApplicationRecord
     self.published_at.strftime("%D")
   end
 
+  def self.search(query)
+      all_posts = all.where('published_at IS NOT NULL')
+      search_results = where('published_at IS NOT NULL AND title ILIKE ?', "%#{query}%")
+
+      if query.empty?
+        return all_posts
+      elsif query
+        if !any?
+          return nil
+        else
+          return search_results
+        end
+      else
+        return all_posts
+      end
+  end
+  
+
   private
 
   def set_slug

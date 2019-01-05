@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
- 
-import VideoBg from '../components/VideoBg';
 import MobileMenu from '../components/MobileMenu';
 import Backdrop from '../components/Backdrop';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 
 class MainLayout extends Component {
@@ -36,8 +35,9 @@ class MainLayout extends Component {
                 <Navigation mobileMenuHandler={this.mobileMenuClickHandler} nameOfClass={'navigation'}/>  
                 <MobileMenu show={this.state.mobileMenuOpen} mobileMenuHandler={this.mobileMenuClickHandler} />
                 {backdrop}
-                <VideoBg />
-                {this.props.page}   
+               
+                {this.props.page}  
+                <Footer /> 
             </div> 
        );
 

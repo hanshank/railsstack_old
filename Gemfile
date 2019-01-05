@@ -57,10 +57,11 @@ gem 'sass-rails'
 gem "aws-sdk-s3", require: false
 
 gem 'bootstrap', '~> 4.2.1'
-
-gem 'active_model_serializers'
 gem 'jquery-rails'
 
 gem 'trix-rails', require: 'trix'
 
 gem "font-awesome-rails"
+
+gem 'active_model_serializers', '~> 0.10.2'
+gem 'ransack'

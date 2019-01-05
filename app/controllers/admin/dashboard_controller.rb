@@ -1,9 +1,8 @@
-module Admin
-    class DashboardController < ApplicationController
-        before_action :authenticate_admin_admin_user!
+class Admin::DashboardController < ApplicationController
+    before_action :authenticate_admin_admin_user!
 
-        def index
+    def index
 
-        end
     end
 end
+

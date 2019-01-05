@@ -8,11 +8,12 @@ Trix.config.attachments.preview.caption = {
     var file = attachment.file;
     var form = new FormData;
     form.append("Content-Type", file.type);
-    form.append("photo[file]", file);
+    form.append("image[file]", file);
+    console.log(form);
 
     // Create our XHR request
     var xhr = new XMLHttpRequest;
-    xhr.open("POST", "/photos.json", true);
+    xhr.open("POST", "/images.json", true);
     xhr.setRequestHeader("X-CSRF-Token", Rails.csrfToken());
   
     // Report file uploads back to Trix
@@ -25,10 +26,13 @@ Trix.config.attachments.preview.caption = {
     xhr.onload = function() {
       if (xhr.status === 201) {
         var data = JSON.parse(xhr.responseText);
+        console.log("here we go baby");
         return attachment.setAttributes({
-          url: data.image_url
+          url: data.image_url,
+          href: data.url
         })
       }
+      console.log("on load baby")
     }
     
     return xhr.send(form);

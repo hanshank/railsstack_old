@@ -4,10 +4,12 @@ import BlogPost from './BlogPost';
  
 
 const PostPreview = props => {
-    const post = props.post;
     
+    const post = props.post;
+    console.log(props);
 
     return(
+
         <div className='post-preview'> 
             <div className="post-listing col-12 col-sm-6 col-md-4 col-lg-4">
                 <img src={post.image.url} className="img-fluid" alt={post.image_alt_attribute} />
@@ -20,7 +22,7 @@ const PostPreview = props => {
                     }
                 }}>
                 
-                    <button className="btn">Read More</button>
+                    <button className="btn full-width">Read More</button>
                 </Link>
             </div>
         </div>           
