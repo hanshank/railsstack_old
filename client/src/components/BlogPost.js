@@ -38,7 +38,7 @@ class BlogPost extends React.Component {
                         <div className='col-12 col-md-8 col-md-offset-2 post-content-section'>
                             <div className="post-author-box d-flex-center">
                                 <div className="user-img-container" style={{backgroundImage: `url(${post.admin_user.image.url})`}}  ></div>
-                                <h3 className="post-author" >{`${post.admin_user.name} ` + post.published_date}</h3>
+                                <h3 className="post-author" >By {`${post.admin_user.name} ` + post.published_date}</h3>
                             </div>
                             <div className="post-content" id="post-content" dangerouslySetInnerHTML={{__html: post.content}}></div>
                         </div>

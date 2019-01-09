@@ -35,7 +35,7 @@ class Post < ApplicationRecord
   end
 
   def published_date
-    self.published_at.strftime("%D")
+    self.published_at.strftime("%e %b, %Y")
   end
 
   def self.search(query)

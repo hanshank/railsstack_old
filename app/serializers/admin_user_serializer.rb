@@ -1,5 +1,5 @@
 class AdminUserSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name
 
   has_one :image
 
