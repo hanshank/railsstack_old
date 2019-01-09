@@ -5,8 +5,12 @@
         "npm": "6.4.1"
     },
     "scripts": {
+        "dokku": {
+            "postdeploy": "bundle exec rake db:migrate"
+        },
         "build": "cd client && npm install && npm run build && cd ..",
         "deploy": "cp -a client/build/. public/",
         "postinstall": "npm rebuild node-sass && npm run build && npm run deploy && echo 'Client built!'"
+        
     }
 }

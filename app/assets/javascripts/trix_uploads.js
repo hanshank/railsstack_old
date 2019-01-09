@@ -3,6 +3,21 @@ Trix.config.attachments.preview.caption = {
   size: false
 };
 
+// buttonHTML = """<button type="button" class="icon attach" data-trix-action="x-attach" title="Attach Files">Attach Files</button>"""
+
+// $(Trix.config.toolbar.content).find(".button_group.block_tools").append(buttonHTML)
+
+// $(document).on "trix-action-invoke", (event) ->
+//   if event.originalEvent.actionName is "x-attach"
+//     editorElement = event.target
+
+//     fileInput = $("""<input type="file" multiple>""")
+//     fileInput.on "change", ->
+//       for file in this.files
+//         editorElement.editor.insertFile(file)
+
+//     fileInput.click()
+
   function uploadAttachment(attachment) {
     // Create our form data to submit
     var file = attachment.file;

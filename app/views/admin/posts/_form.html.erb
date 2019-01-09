@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <%= form_for [:admin, @post] do |f| %>
+            <%= form_for [:admin, @post], id: 'new-post-form', remote: true do |f| %>
                 <div class="form-group">
                     <%= f.label :title %>
                     <%= f.text_field :title %>
@@ -34,6 +34,7 @@
 
 
         <%= f.submit %>
+        <span class="button" id="save-post-btn">Save</span>
     <% end %>
 
 
